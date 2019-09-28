@@ -1,0 +1,37 @@
+{
+  "name": "unsafe-browser-aes",
+  "umdName": "unsafeBrowserAES",
+  "main": "./dist/cjs/index.js",
+  "umd": "./dist/umd/unsafe-browser-aes.umd.js",
+  "version": "0.0.1",
+  "description": "Library for unsafe raw AES block operations in the browser, using Web Crypto.",
+  "author": "Lucas Garron <code@garron.net> (https://garron.net/)",
+  "license": "(MIT OR GPL-3.0-or-later)",
+  "repository": "github:cubing/unsafe-browser-aes",
+  "types": "./dist/index.d.ts",
+  "dependencies": {},
+  "externalDependencies": [],
+  "umdGlobals": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "rollup": "^1.21.4",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-tslint": "^0.2.2",
+    "rollup-plugin-typescript2": "^0.21.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -cw",
+    "clean": "rm -rf dist",
+    "test": "jest && npm run lint",
+    "setup": "npm install",
+    "lint": "tslint --fix --project . ; tslint --fix rollup.config.js",
+    "prepack": "npm run clean && npm run build"
+  }
+}
