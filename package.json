@@ -21,7 +21,7 @@
     "rollup-plugin-terser": "^5.1.2",
     "rollup-plugin-tslint": "^0.2.2",
     "rollup-plugin-typescript2": "^0.21.2",
-    "ts-jest": "^24.1.0",
+    "ts-jest": "^29.0.3",
     "tslint": "^5.20.0",
     "typescript": "^3.6.3"
   },
