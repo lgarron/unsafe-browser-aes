@@ -1,7 +1,12 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "ignore": ["./.cache", "./dist", "./package.json"]
+    "ignore": [
+      "./.cache",
+      "./dist",
+      "./package.json",
+      "./src/vendor/bun-types-workaround.d.ts"
+    ]
   },
   "formatter": {
     "indentStyle": "space",

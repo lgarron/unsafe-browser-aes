@@ -13,6 +13,10 @@ build-lib: setup
 build-types: setup
 	bun x tsc --project tsconfig.json
 
+.PHONY: test
+test: lint
+	bun test
+
 .PHONY: dev
 dev: setup
 	bun script/dev.js
