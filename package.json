@@ -1,6 +1,6 @@
 {
   "name": "unsafe-browser-aes",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "module": "dist/lib/unsafe-browser-aes/esm/index.js",
   "types": "dist/lib/unsafe-browser-aes/types/index.js",
