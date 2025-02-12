@@ -42,4 +42,4 @@ prepublishOnly: clean build
 
 .PHONY: publish
 publish:
-	bun publish
+	npm publish
