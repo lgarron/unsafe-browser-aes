@@ -35,3 +35,7 @@ reset: clean
 
 .PHONY: prepublishOnly
 prepublishOnly: clean build
+
+.PHONY: publish
+publish:
+	bun publish
