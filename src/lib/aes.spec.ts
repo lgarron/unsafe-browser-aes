@@ -1,3 +1,4 @@
+import "../vendor/bun-types-workaround.d.ts";
 import { expect, test } from "bun:test";
 import { importKey, unsafeEncryptBlock } from "./aes";
 

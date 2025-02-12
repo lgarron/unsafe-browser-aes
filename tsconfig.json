@@ -4,8 +4,7 @@
     "target": "es2020",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "./dist/lib/unsafe-browser-aes/types",
-    "types": ["./src/vendor/bun-types-workaround.d.ts"]
+    "outDir": "./dist/lib/unsafe-browser-aes/types"
   },
-  "include": ["./src/lib/"]
+  "include": ["./src/lib/index.ts"]
 }
