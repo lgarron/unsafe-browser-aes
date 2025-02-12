@@ -1,15 +1,10 @@
 {
   "compilerOptions": {
-    "lib": [
-      "DOM",
-      "ES2020"
-    ],
+    "lib": ["DOM", "ES2020"],
     "target": "es2020",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "dist/types"
+    "outDir": "./lib/unsafe-browser-aes/types"
   },
-  "include": [
-    "./src/lib/"
-  ]
+  "include": ["./src/lib/"]
 }

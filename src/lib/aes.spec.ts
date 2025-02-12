@@ -1,6 +1,7 @@
-import { importKey, unsafeEncryptBlock } from "../lib";
+import { expect, test } from "bun:test";
+import { importKey, unsafeEncryptBlock } from "./aes";
 
-async function test() {
+test("test vector", async () => {
   // https://csrc.nist.gov/csrc/media/publications/fips/197/final/documents/fips-197.pdf
   const plaintextBytes = new Uint8Array([
     0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb,
@@ -20,14 +21,5 @@ async function test() {
   console.log(encrypted);
 
   console.log(expectedCiphertextBytes);
-  console.log({
-    equal: areArrayBuffersEqual(encrypted, expectedCiphertextBytes),
-  });
-}
-
-// From https://stackoverflow.com/a/76791831
-function areArrayBuffersEqual(a: ArrayBuffer, b: ArrayBuffer): boolean {
-  return indexedDB.cmp(a, b) === 0;
-}
-
-test();
+  expect(encrypted).toEqual(expectedCiphertextBytes.buffer);
+});
